@@ -1,0 +1,43 @@
+.nav {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 22px;
+  background-color: rgba(0, 0, 0, 0.527) !important;
+}
+
+.active-link {
+  box-shadow: 2px 2px 2px black;
+  background-color: #ccb382;
+  border-radius: 10px;
+  padding: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.aws {
+  cursor: pointer;
+  color: #fff;
+  transition-duration: 0.3s;
+}
+
+.aws:hover {
+  color: #ccb382 !important;
+}
+li a {
+  transition-duration: 0.2s;
+}
+
+li a:hover {
+  color: #867553 !important;
+}
+
+.img-fluid {
+  color: #fff;
+  transform: scale(3);
+  margin-top: 5px;
+  height: 50px;
+
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,151 @@
+<div class=" p-5 ">
+  <owl-carousel-o [options]="customOptions">
+    <ng-container *ngFor="let movie of trendingMovies">
+      <ng-template carouselSlide [id]="movie.id">
+        <img src="https://image.tmdb.org/t/p/original/{{movie.poster_path}}" class="owl w-100 ">
+      </ng-template>
+    </ng-container>
+  </owl-carousel-o>
+</div>
+
+
+<div class="row">
+  <div class="col-md-4 headline">
+    <div class="brdr my-5 w-25"></div>
+
+    <h2>Popular Movies <br> Right Now </h2>
+    <p class="secondColor">Trending Movies To Watch Right Now </p>
+    <div class="brdr my-3 w-100"></div>
+
+  </div>
+
+  <div *ngFor="let movie of trendingMovies" class=" col-md-2  position-relative">
+
+    <div class="movie my-3">
+      <a [routerLink]="['/moviedetails', movie.id]">
+
+        <img [src]="imgPrefix+movie.poster_path " class="w-100" alt="">
+        <h3 class=" h5 mt-2">{{movie.title}}</h3>
+        <div class="vote position-absolute end-0 top-0 ">
+          {{movie.vote_average}}
+        </div>
+      </a>
+    </div>
+
+  </div>
+
+
+</div>
+<p class=" mx-auto d-flex justify-content-center page px-3 mt-3 ">{{currentPage}}</p>
+<div class="   my-3 py-5 d-flex justify-content-center ">
+  <i (click)="prev() " class=" p-3 fas fa-arrow-circle-left"></i>
+  <a class="backgr p-2 px-3 text-white " *ngFor="let pageNumber of pageNumbers; let i = index "
+    (click)='changePage(pageNumber)'>
+    {{pageNumber}}</a>
+  <i (click)="next()" class=" p-3 fas fa-arrow-circle-right"></i>
+
+</div>
+
+
+<div class="brdr my-5 w-100"></div>
+
+<div class="my-3  p-5  ">
+  <owl-carousel-o [options]="customOptions">
+    <ng-container *ngFor="let tv of trendingTv">
+      <ng-template carouselSlide [id]="tv.id">
+        <img src="https://image.tmdb.org/t/p/original/{{tv.poster_path}}" class="owl w-100">
+      </ng-template>
+    </ng-container>
+  </owl-carousel-o>
+</div>
+
+
+<div class="row my-5">
+  <div class="col-md-4 headline">
+    <div class="brdr my-5 w-25"></div>
+
+    <h2>Trending Tv <br> To Watch Right Now </h2>
+    <p class="secondColor">Trending Tv To Watch Right Now </p>
+    <div class="brdr my-5 w-100"></div>
+
+  </div>
+
+  <div *ngFor="let tv of trendingTv" class=" col-md-2  position-relative">
+
+    <div class="movie my-3 ">
+      <a [routerLink]="['/tvDetails', tv.id]">
+        <img [src]="imgPrefix+tv.poster_path " class="w-100" alt="">
+        <h3 class=" h5 mt-2">{{tv.name}}</h3>
+        <div class="vote position-absolute end-0 top-0 ">
+          {{tv.vote_average}}
+        </div>
+      </a>
+    </div>
+
+  </div>
+
+
+
+
+</div>
+<p class="mx-auto d-flex justify-content-center page px-3 mt-3  ">{{currentPage1}}</p>
+
+<div class="   my-3 py-5 d-flex justify-content-center ">
+
+  <i (click)="prev1() " class=" p-3 fas fa-arrow-circle-left"></i>
+  <a routerLinkActive="active-link" class=" backgr p-2 px-3 text-white"
+    *ngFor="let pageNumber of pageNumbers; let i = index " (click)='changePage1(pageNumber)'>
+    {{pageNumber}}</a>
+  <i (click)="next1()" class=" p-3 fas fa-arrow-circle-right"></i>
+
+</div>
+
+<div class="brdr my-5 w-100"></div>
+
+
+<div class="my-3  p-5  ">
+  <owl-carousel-o [options]="customOptions">
+    <ng-container *ngFor="let person of trendingPeople">
+      <ng-template carouselSlide [id]="person.id">
+        <img src="https://image.tmdb.org/t/p/original/{{person.profile_path}}" class="owl w-100">
+      </ng-template>
+    </ng-container>
+  </owl-carousel-o>
+</div>
+
+<div class="row ">
+  <div class="col-md-4 headline">
+    <div class="brdr my-5 w-25"></div>
+
+    <h2>Trending People <br> To Know About Right Now </h2>
+    <p class="secondColor">Trending People To Know About Right Now </p>
+    <div class="brdr my-5 w-100"></div>
+
+  </div>
+
+  <div *ngFor="let person of trendingPeople" class=" col-md-2  position-relative">
+
+    <div class="movie my-3 ">
+      <a [routerLink]="['/persondetails', person.id ]">
+        <img class="w-100 rounded " src="https://image.tmdb.org/t/p/original/{{person.profile_path}}"
+          alt="{{person.name}}">
+
+        <h5 class="mb-4 py-3">{{person.name}}</h5>
+
+      </a>
+    </div>
+
+  </div>
+
+
+</div>
+<p class="mx-auto d-flex justify-content-center page px-3 mt-3">{{currentPage2}}</p>
+
+<div class="   my-3 py-5 d-flex justify-content-center ">
+  <i (click)="prev2() " class=" px-2 pt-3 fas fa-arrow-circle-left"></i>
+  <a routerLinkActive="active-link" class=" backgr p-2 px-3 text-white"
+    *ngFor="let pageNumber of pageNumbers; let i = index " (click)='changePage2(pageNumber)'>
+    {{pageNumber}}</a>
+  <i (click)="next2()" class=" p-3 fas fa-arrow-circle-right"></i>
+
+</div>

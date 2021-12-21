@@ -1,0 +1,10 @@
+.container {
+  min-height: 83.1vh;
+}
+.text-warning {
+  padding: 10px;
+  text-shadow: 7px 7px 5px black;
+}
+a {
+  text-decoration: none;
+}

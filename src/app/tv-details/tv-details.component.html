@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="full">
+    <div class="row mt-5">
+      <div class="col-lg-4 mt-5">
+        <img src="{{posterPath+tvDetails.poster_path}}" alt="{{tvDetails.original_title}}" class="w-100 rounded">
+        <p class="text-center">
+
+          <a href="{{tvDetails.homepage}}" class="text-center shadow-lg" target="_blank">
+            <p class="btn shadow-lg last">See More</p>
+          </a>
+        </p>
+      </div>
+      <div class="col-lg-8 mt-5 px-5">
+        <h1 class="mt-3">{{tvDetails.original_title}}{{tvDetails.name}}</h1>
+        <p class="tagline h3">{{tvDetails.tagline}}</p>
+        <div class="d-flex mt-5 align-items-center">
+          <p *ngFor="let genreName of tvDetails.genres" class="btn btn-warning me-2">{{genreName.name}}</p>
+        </div>
+        <div class="details">
+          <p>Vote: {{tvDetails.vote_average}}</p>
+          <p>Vote Count: {{tvDetails.vote_count}}</p>
+          <p>Popularity: {{tvDetails.popularity}}</p>
+          <p>release Date: {{tvDetails.release_date}}{{tvDetails.first_air_date}}</p>
+        </div>
+        <p class="h4 tagline mb-4 overview">{{tvDetails.overview}}</p>
+      </div>
+    </div>
+  </div>
+</div>

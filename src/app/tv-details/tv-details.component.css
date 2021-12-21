@@ -1,0 +1,30 @@
+.tagline {
+  color: rgb(172, 172, 172) !important;
+}
+.tagline:last-child {
+  line-height: 30px !important;
+}
+.btn-warning {
+  cursor: auto !important;
+}
+.last {
+  cursor: pointer !important;
+  margin-top: 30px;
+  background-color: #154588;
+  color: white;
+}
+.details p {
+  margin: 30px 0px;
+  font-size: 25px;
+}
+
+.overview {
+  font-size: 17px !important;
+  line-height: 23px;
+}
+.full {
+  min-height: 78vh;
+}
+.container {
+  min-height: 83.1vh;
+}
