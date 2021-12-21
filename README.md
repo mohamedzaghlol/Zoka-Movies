@@ -1,5 +1,8 @@
 # Zoka-Movies
 This project was generated with Angular CLI version 12.2.10.
+
+# live Demo
+https://zoka-movies.netlify.app
 # Project Notes
 ## Development server
 Run ng serve for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
